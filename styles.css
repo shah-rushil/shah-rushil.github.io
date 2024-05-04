@@ -1,0 +1,144 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Divide the webpage into two halves */
+.left-half, .right-half {
+    height: 100%;
+    float: left; /* Float the elements to the left so they appear side by side */
+}
+
+.project{
+    width: 33%;
+    height:100%;
+    float: left;
+}
+
+/* Apply different background colors to each half */
+.left-half {
+    position: fixed;
+    top: 0; /* Position it at the top of the viewport */
+    bottom: 0; /* Extend it to the bottom of the viewport */
+    left: 0; /* Align it to the left side of the viewport */
+    overflow: hidden; /* Hide any content overflow */
+    width: 30%;
+    padding: 40px;
+    background-color: #bacbe1 ; /* Change this color to the desired color for the left half */
+}
+
+.right-half {
+    overflow-y: auto; /* Allow vertical scrolling */
+    width: 70%;
+    margin-left: 379px; /* Leave space for the fixed left column */
+    padding-right: 40px;
+    padding-left: 90px; /* Text begins 90 pixels to the left of the divider */
+    background-color: #ecf3f9; /* Change this color to the desired color for the right half */
+}
+
+/* Dark Mode Features */
+.dark-mode .left-half{
+    background-color: rgb(69, 69, 69);
+}
+
+.dark-mode .right-half{
+    background-color: rgb(50, 50, 50);
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode a, .dark-mode .project, .dark-mode a:hover{
+    color: rgb(231, 231, 231);
+}
+/* End of Dark Mode Features */
+
+.profile-pic {
+    border-radius: 50%;
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.center-text{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3{
+    text-align: left;
+}
+
+h1{
+    font-size: 30px;
+    font-family: Georgia;
+}
+
+h2{
+    font-size: 40px;
+    font-family: Garamond;
+    text-decoration: underline;
+}
+
+h3{
+    font-size: 24px;
+    font-family: Georgia;
+    font-weight: lighter;
+}
+
+h4{
+    font-size: 20px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+a, a:hover{
+    color:black;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.dark-mode-button {
+    position: absolute;
+    top: 20px;
+    left: 325px;
+    width: 40px;
+    align-self: center;
+    padding: 5px 5px; /* Padding to adjust button size */
+    border-radius: 5px; /* Rounded corners */
+
+    background-color: #bacbe1; /* Background color */
+    cursor: pointer; /* Cursor style on hover */
+    border: none;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.dark-mode .dark-mode-button{
+    background-color: rgb(69, 69, 69);
+    font-style: normal;
+}
