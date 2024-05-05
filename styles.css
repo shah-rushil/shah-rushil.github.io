@@ -70,7 +70,7 @@ body {
 .logo-pic{
     border-radius: 50%;
     width: 400%; /* Adjust the width as needed */
-    max-width: 55px;
+    max-width: 5px;
     height: auto; /* Adjust the height as needed */
     align-items: center;
     justify-content: center;
