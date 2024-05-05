@@ -11,13 +11,13 @@ body {
 
 /* Divide the webpage into two halves */
 .left-half, .right-half {
-    height: 100%;
+    height: 100vh;
     float: left; /* Float the elements to the left so they appear side by side */
 }
 
 .project{
-    width: 33%;
-    height:100%;
+    width: 17vw;
+    height:auto;
     float: left;
 }
 
@@ -28,17 +28,17 @@ body {
     bottom: 0; /* Extend it to the bottom of the viewport */
     left: 0; /* Align it to the left side of the viewport */
     overflow: hidden; /* Hide any content overflow */
-    width: 30%;
-    padding: 40px;
+    width: 30vw;
+    padding: 3.5%;
     background-color: #bacbe1 ; /* Change this color to the desired color for the left half */
 }
 
 .right-half {
     overflow-y: auto; /* Allow vertical scrolling */
-    width: 70%;
-    margin-left: 379px; /* Leave space for the fixed left column */
-    padding-right: 40px;
-    padding-left: 90px; /* Text begins 90 pixels to the left of the divider */
+    width: 70vw;
+    margin-left: 30vw; /* Leave space for the fixed left column */
+    padding-right: 3%;
+    padding-left: 7%; /* Text begins 90 pixels to the left of the divider */
     background-color: #ecf3f9; /* Change this color to the desired color for the right half */
 }
 
@@ -58,12 +58,24 @@ body {
 
 .profile-pic {
     border-radius: 50%;
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
+    width: 100%; /* Adjust the width as needed */
+    max-width: 200px;
+    height: auto; /* Adjust the height as needed */
     align-items: center;
     justify-content: center;
     display: block;
     margin: 0 auto;
+}
+
+.logo-pic{
+    border-radius: 50%;
+    width: 400%; /* Adjust the width as needed */
+    max-width: 55px;
+    height: auto; /* Adjust the height as needed */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10%;
 }
 
 .center-text{
@@ -79,28 +91,28 @@ h1, h2, h3{
 }
 
 h1{
-    font-size: 30px;
+    font-size: 2.5vw;
     font-family: Georgia;
 }
 
 h2{
-    font-size: 40px;
+    font-size: 3.2vw;
     font-family: Garamond;
     text-decoration: underline;
 }
 
 h3{
-    font-size: 24px;
+    font-size: 2vw;
     font-family: Georgia;
     font-weight: lighter;
 }
 
 h4{
-    font-size: 20px;
+    font-size: 1.55vw;
 }
 
 h5{
-    font-size: 16px;
+    font-size: 1.3vw;
 }
 
 a, a:hover{
@@ -119,22 +131,22 @@ a:hover{
 
 p{
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1.3vw;
 }
 
 .dark-mode-button {
     position: absolute;
-    top: 20px;
-    left: 325px;
-    width: 40px;
+    top: 16px;
+    left: 25vw;
+    width: 4vw;
     align-self: center;
-    padding: 5px 5px; /* Padding to adjust button size */
-    border-radius: 5px; /* Rounded corners */
+    padding: 1vw 1vw; 
+    border-radius: 5px; 
 
-    background-color: #bacbe1; /* Background color */
-    cursor: pointer; /* Cursor style on hover */
+    background-color: #bacbe1;
+    cursor: pointer;
     border: none;
-    font-size: 30px;
+    font-size: 2.7vw;
     font-weight: bolder;
 }
 
