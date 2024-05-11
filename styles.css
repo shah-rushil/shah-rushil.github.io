@@ -15,10 +15,40 @@ body {
     float: left; /* Float the elements to the left so they appear side by side */
 }
 
+/* Project Formatting */
 .project{
-    width: 17vw;
+    width: 19vw;
     height:auto;
     float: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.project-img{
+    border-radius: 10%;
+    width: 13.5vw;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.project-img:hover{
+    transform: scale(1.15);
+}
+
+.project-img-link{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.project-text {
+    position: absolute;
+    margin-top: 107%;
+    left: 0;
+    width: 100%; /* Text takes full width of parent container */
+    padding: 10px;
+    text-align: center; /* Align text in the center */
 }
 
 /* Apply different background colors to each half */
@@ -39,7 +69,7 @@ body {
     margin-left: 30vw; /* Leave space for the fixed left column */
     padding-right: 3%;
     padding-left: 7%; /* Text begins 90 pixels to the left of the divider */
-    background-color: #ecf3f9; /* Change this color to the desired color for the right half */
+    background-color: #ecf3f9;
 }
 
 /* Dark Mode Features */
@@ -69,7 +99,7 @@ body {
 
 .logo-pic{
     border-radius: 50%;
-    width: 400%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     max-width: 55px;
     height: auto; /* Adjust the height as needed */
     align-items: center;
