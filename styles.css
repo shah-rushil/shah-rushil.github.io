@@ -30,6 +30,7 @@ body {
     border-radius: 10%;
     width: 13.5vw;
     transition: transform 0.3s ease; /* Smooth transition */
+    max-width: 250px;
 }
 
 .project-img:hover{
