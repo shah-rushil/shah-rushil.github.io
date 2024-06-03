@@ -12,16 +12,16 @@ function applyDarkMode(){
   document.body.classList.toggle('dark-mode');
   if(darkModeToggle.textContent == "\u263D"){
     darkModeToggle.textContent = '\u2600';
-    localStorage.setItem("isDark", false);
+    sessionStorage.setItem("isDark", false);
   }
   else{
     darkModeToggle.textContent = "\u263D";
-    localStorage.setItem("isDark", true);
+    sessionStorage.setItem("isDark", true);
   }
 }
 
 window.onload = function() { // Applies darkmode upon loading
-  if(localStorage.getItem("isDark")){
+  if(sessionStorage.getItem("isDark")){
     applyDarkMode();
   }
 };
