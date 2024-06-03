@@ -28,8 +28,8 @@ body {
 
 .project-img{
     border-radius: 10%;
-    width: 13.5vw;
     transition: transform 0.3s ease; /* Smooth transition */
+    max-width: 14vw;
 }
 
 .project-img:hover{

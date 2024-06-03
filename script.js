@@ -1,24 +1,32 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const stylesheet = document.getElementById('stylesheet');
 const links = document.querySelectorAll('a[href^="#"]');
-const is_dark_mode = localStorage.getItem('dark-mode');
 
-if(is_dark_mode == 'on'){
-  darkModeToggle.textContent = "\u263D";
-  document.body.classList.toggle('dark-mode');
-}
+// Dark Mode swap
 
 darkModeToggle.addEventListener('click', function() {
+  applyDarkMode();
+});
+
+function applyDarkMode(){
   document.body.classList.toggle('dark-mode');
   if(darkModeToggle.textContent == "\u263D"){
     darkModeToggle.textContent = '\u2600';
-    localStorage.setItem('dark-mode', 'off');
+    localStorage.setItem("isDark", false);
   }
   else{
     darkModeToggle.textContent = "\u263D";
-    localStorage.setItem('dark-mode', 'on');
+    localStorage.setItem("isDark", true);
   }
-});
+}
+
+window.onload = function() { // Applies darkmode upon loading
+  if(localStorage.getItem("isDark")){
+    applyDarkMode();
+  }
+};
+
+// Smooth Transition upon clicking hyperlink
 
 links.forEach(link => {
   link.addEventListener('click', function(event) {
