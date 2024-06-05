@@ -1,6 +1,7 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const stylesheet = document.getElementById('stylesheet');
 const links = document.querySelectorAll('a[href^="#"]');
+const addElement = document.getElementsByClassName('add-element');
 
 // Dark Mode swap
 
@@ -12,16 +13,16 @@ function applyDarkMode(){
   document.body.classList.toggle('dark-mode');
   if(darkModeToggle.textContent == "\u263D"){
     darkModeToggle.textContent = '\u2600';
-    sessionStorage.setItem("isDark", false);
+    sessionStorage.setItem("isDark", "true");
   }
   else{
     darkModeToggle.textContent = "\u263D";
-    sessionStorage.setItem("isDark", true);
+    sessionStorage.setItem("isDark", "false");
   }
 }
 
 window.onload = function() { // Applies darkmode upon loading
-  if(sessionStorage.getItem("isDark")){
+  if(sessionStorage.getItem("isDark") == "true"){
     applyDarkMode();
   }
 };

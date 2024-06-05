@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="todo.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Physics Simulations</title>
+    <title>To-Do List</title>
 </head>
 
 <body>
@@ -45,12 +46,37 @@
     <div class="right-half">
         <div style="height: 80px;"></div>
         <a href="/index.html#proj">Back to Projects!</a>
-        <div style="height: 30px;"></div>
-        <h2>
-            ToDo List will be added soon!
-        </h2>
+        <div style="height: 40px;"></div>
+        <div class="task" id="not-started-task"> <!-- Not Started Tasks -->
+            <div class="not-started-title">
+                Not Started
+            </div>
+            <div class="spacer"></div>
+            <div class="add-element" id="not-started">
+                +
+            </div>
+        </div>
+        <div class="task" id="started-task"> <!-- Unfinished Tasks -->
+            <div class="started-title">
+                Started
+            </div>
+            <div class="spacer"></div>
+            <div class="add-element" id="started">
+                +
+            </div>
+        </div>
+        <div class="task" id="completed-task"> <!-- Finished Tasks -->
+            <div class="completed-title">
+                Completed
+            </div>
+            <div class="spacer"></div>
+            <div class="add-element" id="completed">
+                +
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script src="todo.js"></script>
 </body>
 
 </html>

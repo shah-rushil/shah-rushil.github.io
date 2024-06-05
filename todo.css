@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Task List Formatting */
+.task{
+    width: 20vw;
+    height:auto;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    position: relative;
+    padding: 1vw;
+}
+
+.task-text {
+    position: absolute;
+    margin-top: 107%;
+    left: 0;
+    width: 100%; /* Text takes full width of parent container */
+    padding: 10px;
+    text-align: center; /* Align text in the center */
+}
+
+/* Task List Header Formatting */
+
+.completed-title, .add-element, .started-title, .not-started-title{
+    display: block; /* Ensure the divs take the full width */
+    clear: both;    /* Ensure they start on a new line */
+    width: 100%;     /* Specific width for visual layout */
+    margin: 10px auto; /* Centered and with margin for spacing */
+    border-radius: 8%;
+    text-align: center;
+    font-size: 150%;
+}
+
+.completed-title {
+    border: 2px solid rgb(0, 169, 45);
+    background-color: rgba(0, 169, 45, 0.4);
+}
+
+.started-title{
+    border: 2px solid rgb(192, 206, 0);
+    background-color: rgba(192, 206, 0, 0.4);
+}
+
+.not-started-title{
+    border: 2px solid rgb(156, 1, 1);
+    background-color: rgba(156, 1, 1, 0.4);
+}
+
+.dark-mode .not-started-title, .dark-mode .started-title, .dark-mode .completed-title, .dark-mode .add-element, .dark-mode .list-element, .dark-mode .textarea-element{
+    color: rgb(231, 231, 231);
+}
+
+/* Task List Element Formatting */
+
+.add-element{
+    background-color: rgba(95, 95, 95, 0.4);
+}
+
+.list-element{
+    position: relative; /* Add relative positioning to the container */
+    display: grid;
+    grid-template-columns: 1.2fr auto;
+    grid-template-rows: auto 0.5fr;
+    grid-template-areas: 
+        "textarea close-button"
+        "textarea .";
+    margin-bottom: 10px;
+    border-radius: 5%;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.list-element, .textarea-element{
+    background-color: rgb(177, 177, 177);
+}
+
+.dark-mode .textarea-element, .dark-mode .list-element{
+    background-color: rgb(95, 95, 95);
+}
+
+.add-element, .list-element{
+    border: 2px solid rgb(95, 95, 95);
+}
+
+.spacer {
+    height: 1vw;
+    display: block;
+    clear: both;
+}
+
+.add-element:hover{
+    background-color: rgba(95, 95, 95, 0.8);
+}
+
+.textarea-element{
+    box-sizing: border-box;
+    flex-grow: 1;
+    border: none;
+    resize: none;
+}
+
+.close-button {
+    width: 5%;
+    height: 6%;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0;
+}
+
+.list-element:hover .close-button{
+    opacity: 1;
+}
