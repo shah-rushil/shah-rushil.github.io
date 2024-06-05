@@ -1,6 +1,3 @@
-const addElement = document.getElementsByClassName('add-element');
-const stylesheet = document.getElementById('stylesheet');
-
 // Add element for To Do List
 
 for(let i = 0; i < addElement.length; i++){
