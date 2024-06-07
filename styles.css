@@ -81,7 +81,7 @@ body {
     background-color: rgb(50, 50, 50);
 }
 
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode a, .dark-mode .project, .dark-mode a:hover, .dark-mode ul li::before, .dark-mode ul li{
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode a, .dark-mode .project, .dark-mode a:hover, .dark-mode ul li::before, .dark-mode li{
     color: rgb(207, 207, 207);
 }
 /* End of Dark Mode Features */
@@ -97,7 +97,7 @@ ul li {
 
 .handout-topic{
     display: block;
-    width: 29vw;
+    width: 100%;
     padding: 1vw;
 }
 
