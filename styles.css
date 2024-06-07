@@ -81,10 +81,36 @@ body {
     background-color: rgb(50, 50, 50);
 }
 
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode a, .dark-mode .project, .dark-mode a:hover{
-    color: rgb(231, 231, 231);
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode a, .dark-mode .project, .dark-mode a:hover, .dark-mode ul li::before, .dark-mode ul li{
+    color: rgb(207, 207, 207);
 }
 /* End of Dark Mode Features */
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+.handout-topic{
+    display: block;
+    width: 29vw;
+    padding: 1vw;
+}
+
+.handout-container{
+    display: flex;
+}
+
+ul li::before{
+    position:absolute;
+    left: 0;
+    top: 0;
+    content: '>>';
+}
 
 .profile-pic {
     border-radius: 50%;
