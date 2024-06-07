@@ -83,7 +83,7 @@
 }
 
 .dark-mode .textarea-element, .dark-mode .list-element{
-    background-color: rgb(95, 95, 95);
+    background-color: rgb(99, 99, 99);
 }
 
 .add-element, .list-element{
@@ -105,6 +105,7 @@
     flex-grow: 1;
     border: none;
     resize: none;
+    font-size: 125%;
 }
 
 .close-button {
