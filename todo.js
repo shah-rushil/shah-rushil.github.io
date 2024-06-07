@@ -252,3 +252,21 @@ for(let i = 0; i < addElement.length; i++){
       });
     });
 }
+
+
+// Reset Button Functionality
+
+let resetButton = document.getElementById("reset");
+
+resetButton.addEventListener('click', () => {
+  const notStartedTrans = db.transaction("notStartedTasks", "readwrite");
+  const notStartedStore = notStartedTrans.objectStore("notStartedTasks");
+  notStartedStore.clear();
+  const startedTrans = db.transaction("startedTasks", "readwrite");
+  const startedStore = startedTrans.objectStore("startedTasks");
+  startedStore.clear();
+  const completedTrans = db.transaction("completedTasks", "readwrite");
+  const completedStore = completedTrans.objectStore("completedTasks");
+  completedStore.clear();
+  location.reload();
+});

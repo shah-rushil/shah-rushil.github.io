@@ -6,14 +6,15 @@
 
 /* Task List Formatting */
 .task{
-    width: 20vw;
+    width: 19vw;
     height:auto;
     float: left;
-    align-items: center;
     justify-content: center;
-    display: block;
+    display: flex;
     position: relative;
     padding: 1vw;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .task-text {
@@ -58,7 +59,7 @@
 
 /* Task List Element Formatting */
 
-.add-element{
+.add-element, .reset-button{
     background-color: rgba(95, 95, 95, 0.4);
 }
 
@@ -86,7 +87,7 @@
     background-color: rgb(99, 99, 99);
 }
 
-.add-element, .list-element{
+.add-element, .list-element, .reset-button{
     border: 2px solid rgb(95, 95, 95);
 }
 
@@ -96,7 +97,7 @@
     clear: both;
 }
 
-.add-element:hover{
+.add-element:hover, .reset-button:hover{
     background-color: rgba(95, 95, 95, 0.8);
 }
 
@@ -125,4 +126,18 @@
 
 .list-element:hover .close-button{
     opacity: 1;
+}
+
+/* Reset Button */
+
+.reset-button{
+    position: absolute;
+    top: 7vw;
+    right: 7vw;
+    padding: 0.3%;
+    color: rgb(29, 29, 29);
+}
+
+.dark-mode .reset-button{
+    color: rgb(209, 209, 209);
 }
