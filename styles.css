@@ -27,7 +27,6 @@ body {
 }
 
 .project-img{
-    border-radius: 10%;
     transition: transform 0.3s ease; /* Smooth transition */
     width: 14vw;
 }
